@@ -1,25 +1,25 @@
-package com.kafka.consumer;
-
-import org.springframework.kafka.annotation.KafkaListener;
-import org.springframework.stereotype.Component;
-
-@Component
-public class KafkaConsumer {
-
-    @KafkaListener(topics = "my-topic", groupId = "my-new-group" )
-    public void listen(String message) {
-        System.out.println("Received message: " + message);
-    }
-
-    @KafkaListener(topics = "my-topic", groupId = "my-new-group" )
-    public void listen2(String message) {
-        System.out.println("Received message 2: " + message);
-    }
-
-    @KafkaListener(topics = "my-new-topic", groupId = "my-new-group-rider" )
-    public void listenRiderLocation(RiderLocation location) {
-        System.out.println("Received Location: " + location.getRiderId() + " location longitude: " + location.getLongitude()
-                            + " Location Latitude: " + location.getLatitude());
-    }
-
-}
+//package com.kafka.consumer;
+//
+//import org.springframework.kafka.annotation.KafkaListener;
+//import org.springframework.stereotype.Component;
+//
+//@Component
+//public class KafkaConsumer {
+//
+//    @KafkaListener(topics = "my-topic", groupId = "my-new-group" )
+//    public void listen(String message) {
+//        System.out.println("Received message: " + message);
+//    }
+//
+//    @KafkaListener(topics = "my-topic", groupId = "my-new-group" )
+//    public void listen2(String message) {
+//        System.out.println("Received message 2: " + message);
+//    }
+//
+//    @KafkaListener(topics = "my-new-topic", groupId = "my-new-group-rider" )
+//    public void listenRiderLocation(RiderLocation location) {
+//        System.out.println("Received Location: " + location.getRiderId() + " location longitude: " + location.getLongitude()
+//                            + " Location Latitude: " + location.getLatitude());
+//    }
+//
+//}
